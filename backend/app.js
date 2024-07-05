@@ -7,6 +7,7 @@ const { notFound, errorHandler } = require("./middleware/error-handler");
 
 const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
+const messageRoutes = require("./routes/messageRoutes");
 // const cors = require('cors');
 
 // app.use(cors());
@@ -22,6 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/user", userRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/message", messageRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
