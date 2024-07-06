@@ -4,7 +4,7 @@
   "main": "backend/app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "build": "npm install --legacy-peer-deps  && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+    "build": "npm install --legacy-peer-deps  && npm install --legacy-peer-deps --prefix Chat-app-ui && npm run build --prefix Chat-app-ui"
   },
   "author": "ayush",
   "license": "ISC",
