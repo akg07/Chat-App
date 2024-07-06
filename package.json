@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "backend/app.js",
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "build": "npm install --legacy-peer-deps  && npm install --legacy-peer-deps --prefix Chat-app-ui && npm run build --prefix Chat-app-ui"
   },
   "author": "ayush",
