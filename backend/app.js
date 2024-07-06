@@ -49,8 +49,8 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
-    // origin: "https://chat-application-ympr.onrender.com/",
+    // origin: "http://localhost:3000",
+    origin: "https://chat-application-ympr.onrender.com/",
   },
 });
 
