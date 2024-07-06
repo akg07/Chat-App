@@ -1,0 +1,3 @@
+[submodule "Chat-app-ui"]
+	path = Chat-app-ui
+	url = https://github.com/akg07/Chat-app-ui
