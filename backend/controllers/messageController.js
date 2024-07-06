@@ -39,7 +39,10 @@ const sendMessage = asyncHandler(async (req, res) => {
 
 const allMessages = asyncHandler(async (req, res) => {
   try {
-    const messages = await Message.find({ chat: req.params.chatId })
+    const messages = await Message.find({
+      chat: req.params.chatId,
+      is_delete: false,
+    })
       .populate("sender", "name pic email")
       .populate("chat");
 
@@ -50,4 +53,18 @@ const allMessages = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { sendMessage, allMessages };
+const deleteAllMessage = asyncHandler(async (req, res) => {
+  try {
+    const result = await Message.updateMany(
+      { chat: req.params.chatId },
+      { $set: { is_delete: true } }
+    );
+
+    res.json(result);
+  } catch (err) {
+    res.status(400);
+    throw new Error(err.message);
+  }
+});
+
+module.exports = { sendMessage, allMessages, deleteAllMessage };

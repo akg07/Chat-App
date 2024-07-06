@@ -1,10 +1,10 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-  "main": "backend/app.js",
+  "main": "app.js",
   "scripts": {
     "start": "node backend/app.js",
-    "dev": "nodemon app.js",
+    "dev": "nodemon backend/app.js",
     "build": "npm install --legacy-peer-deps  && npm install --legacy-peer-deps --prefix Chat-app-ui && npm run build --prefix Chat-app-ui"
   },
   "author": "ayush",
